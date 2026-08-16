@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>JimG3 | Music</title>
 
 <style>
+
+/* =====================================================
+   BASE
+===================================================== */
 
 * {
   box-sizing: border-box;
@@ -24,28 +31,39 @@ body {
   line-height: 1.75;
 }
 
-/* =========================
+
+/* =====================================================
    NAVIGATION
-========================= */
+===================================================== */
 
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+
   padding: 15px 10px;
+
   background: rgba(5, 5, 5, 0.97);
+
   border-bottom: 1px solid #37332d;
+
   z-index: 10;
+
   text-align: center;
 }
 
 nav a {
   color: #bcb9b1;
+
   text-decoration: none;
-  margin: 0 9px;
+
+  margin: 0 8px;
+
   font-size: 11px;
-  letter-spacing: 1.6px;
+
+  letter-spacing: 1.5px;
+
   text-transform: uppercase;
 }
 
@@ -53,15 +71,19 @@ nav a:hover {
   color: #b08d55;
 }
 
-/* =========================
+
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero {
+
   min-height: 100vh;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   text-align: center;
@@ -72,21 +94,21 @@ nav a:hover {
     radial-gradient(
       circle at center,
       #252525 0%,
-      #111111 42%,
+      #111111 43%,
       #050505 100%
     );
 
   position: relative;
 }
 
-/*
-Subtle Celtic-inspired corner detail.
-No symbols, no shamrocks.
-*/
+
+/* Subtle Celtic-inspired corner detailing */
 
 .hero::before,
 .hero::after {
+
   content: "";
+
   position: absolute;
 
   width: 90px;
@@ -98,6 +120,7 @@ No symbols, no shamrocks.
 }
 
 .hero::before {
+
   top: 120px;
   left: 35px;
 
@@ -106,6 +129,7 @@ No symbols, no shamrocks.
 }
 
 .hero::after {
+
   bottom: 45px;
   right: 35px;
 
@@ -118,6 +142,7 @@ No symbols, no shamrocks.
 }
 
 .logo {
+
   font-family: Arial, Helvetica, sans-serif;
 
   font-size: clamp(55px, 15vw, 120px);
@@ -132,20 +157,24 @@ No symbols, no shamrocks.
 }
 
 .celtic-line {
+
   width: 170px;
+
   height: 1px;
 
   margin: 25px auto;
 
-  background: linear-gradient(
-    to right,
-    transparent,
-    #a98755,
-    transparent
-  );
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      #a98755,
+      transparent
+    );
 }
 
 .subtitle {
+
   font-size: 16px;
 
   letter-spacing: 5px;
@@ -156,6 +185,7 @@ No symbols, no shamrocks.
 }
 
 .intro {
+
   max-width: 650px;
 
   margin: 30px auto 0;
@@ -166,6 +196,7 @@ No symbols, no shamrocks.
 }
 
 .button {
+
   display: inline-block;
 
   margin-top: 30px;
@@ -186,15 +217,19 @@ No symbols, no shamrocks.
 }
 
 .button:hover {
+
   background: #a98755;
+
   color: #090909;
 }
 
-/* =========================
+
+/* =====================================================
    SECTIONS
-========================= */
+===================================================== */
 
 section {
+
   max-width: 950px;
 
   margin: auto;
@@ -203,6 +238,7 @@ section {
 }
 
 h2 {
+
   font-family: Arial, Helvetica, sans-serif;
 
   font-size: 30px;
@@ -217,7 +253,9 @@ h2 {
 }
 
 .section-line {
+
   width: 55px;
+
   height: 1px;
 
   background: #a98755;
@@ -226,6 +264,7 @@ h2 {
 }
 
 p {
+
   color: #b5b2aa;
 
   font-size: 17px;
@@ -235,11 +274,13 @@ p {
   color: #eeeae0;
 }
 
-/* =========================
-   CELTIC BORDER EFFECT
-========================= */
 
-.celtic-border {
+/* =====================================================
+   MUSIC
+===================================================== */
+
+.music-box {
+
   position: relative;
 
   border: 1px solid #302d28;
@@ -251,37 +292,24 @@ p {
   background: #0d0d0d;
 }
 
-.celtic-border::before,
-.celtic-border::after {
+.music-box::before {
+
   content: "";
 
   position: absolute;
 
-  width: 35px;
-  height: 35px;
-
-  border: 1px solid #625442;
-
-  opacity: 0.7;
-}
-
-.celtic-border::before {
   top: -1px;
-  left: -1px;
+  left: 20px;
 
-  border-right: none;
-  border-bottom: none;
+  width: 55px;
+
+  height: 1px;
+
+  background: #a98755;
 }
 
-.celtic-border::after {
-  bottom: -1px;
-  right: -1px;
+.music-box h3 {
 
-  border-left: none;
-  border-top: none;
-}
-
-.celtic-border h3 {
   margin-top: 0;
 
   font-family: Arial, Helvetica, sans-serif;
@@ -291,31 +319,8 @@ p {
   color: #e7e2d7;
 }
 
-/* =========================
-   MUSIC
-========================= */
-
-.music-box {
-  position: relative;
-
-  border: 1px solid #302d28;
-
-  padding: 30px 25px;
-
-  margin-top: 25px;
-
-  background: #0d0d0d;
-}
-
-.music-box h3 {
-  margin-top: 0;
-
-  font-family: Arial, Helvetica, sans-serif;
-
-  letter-spacing: 2px;
-}
-
 .coming-soon {
+
   display: inline-block;
 
   margin: 7px 7px 0 0;
@@ -335,11 +340,13 @@ p {
   text-transform: uppercase;
 }
 
-/* =========================
+
+/* =====================================================
    LYRICS
-========================= */
+===================================================== */
 
 .story {
+
   background: #0d0d0d;
 
   border-top: 1px solid #292724;
@@ -348,6 +355,7 @@ p {
 }
 
 .lyrics-box {
+
   border: 1px solid #302d28;
 
   padding: 30px 25px;
@@ -358,25 +366,44 @@ p {
 }
 
 .lyrics-box h3 {
+
   margin-top: 0;
 
   font-family: Arial, Helvetica, sans-serif;
 
   letter-spacing: 2px;
+
+  color: #e7e2d7;
 }
 
-/* =========================
-   ABOUT
-========================= */
+
+/* =====================================================
+   MY STORY
+===================================================== */
+
+.story-box {
+
+  border-left: 1px solid #776247;
+
+  padding-left: 25px;
+}
+
+
+/* =====================================================
+   ABOUT ME
+===================================================== */
 
 .about-box {
+
   border-left: 1px solid #776247;
 
   padding-left: 25px;
 }
 
 .bio-photo {
+
   width: 190px;
+
   height: 190px;
 
   border-radius: 50%;
@@ -392,17 +419,165 @@ p {
 }
 
 .bio-photo img {
+
   width: 100%;
+
   height: 100%;
 
   object-fit: cover;
 }
 
-/* =========================
-   FACEBOOK
-========================= */
+
+/* =====================================================
+   ML6 COMMUNITY MUSIC GROUP
+===================================================== */
+
+.ml6-section {
+
+  border-top: 1px solid #292724;
+
+  background: #0b0b0b;
+}
+
+.ml6-header {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+}
+
+.ml6-header h2 {
+
+  margin-bottom: 10px;
+}
+
+
+/* Small ML6 artwork */
+
+.ml6-icon {
+
+  width: 82px;
+
+  height: 82px;
+
+  object-fit: cover;
+
+  border: 1px solid #776247;
+
+  background: #090909;
+
+  padding: 4px;
+
+  flex-shrink: 0;
+}
+
+.ml6-intro {
+
+  font-size: 21px;
+
+  color: #d5d0c6;
+
+  margin-top: 25px;
+}
+
+
+/* Expandable section */
+
+.ml6-details {
+
+  margin-top: 25px;
+
+  border: 1px solid #302d28;
+
+  background: #0d0d0d;
+}
+
+.ml6-details summary {
+
+  cursor: pointer;
+
+  padding: 22px 25px;
+
+  color: #d8d1c4;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  list-style: none;
+}
+
+.ml6-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.ml6-details summary::after {
+
+  content: "+";
+
+  float: right;
+
+  color: #a98755;
+
+  font-size: 20px;
+
+  line-height: 1;
+}
+
+.ml6-details[open] summary::after {
+  content: "−";
+}
+
+.ml6-details summary:hover {
+  color: #a98755;
+}
+
+
+/* Expanded content */
+
+.ml6-content {
+
+  padding: 5px 25px 35px;
+
+  border-top: 1px solid #292724;
+}
+
+.ml6-large-image {
+
+  display: block;
+
+  width: min(100%, 620px);
+
+  margin: 30px auto;
+
+  border: 1px solid #776247;
+
+  background: #090909;
+}
+
+.ml6-content p {
+
+  max-width: 760px;
+}
+
+.ml6-strong {
+
+  color: #e8e2d6;
+
+  font-size: 18px;
+}
+
+
+/* ML6 Facebook button */
 
 .facebook {
+
   display: inline-block;
 
   margin-top: 15px;
@@ -425,16 +600,19 @@ p {
 }
 
 .facebook:hover {
+
   background: #a98755;
 
   color: #090909;
 }
 
-/* =========================
+
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer {
+
   text-align: center;
 
   padding: 50px 25px;
@@ -447,14 +625,16 @@ footer {
 }
 
 footer p {
+
   color: #65625c;
 
   font-size: 13px;
 }
 
-/* =========================
+
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media (max-width: 600px) {
 
@@ -463,31 +643,63 @@ footer p {
   }
 
   nav a {
-    margin: 0 4px;
 
-    font-size: 9px;
+    margin: 0 3px;
 
-    letter-spacing: 1px;
+    font-size: 8px;
+
+    letter-spacing: 0.8px;
   }
 
   .subtitle {
+
     font-size: 13px;
 
     letter-spacing: 2px;
   }
 
   section {
+
     padding: 70px 22px;
   }
 
   h2 {
+
     font-size: 25px;
   }
 
   .hero::before,
   .hero::after {
+
     width: 55px;
+
     height: 55px;
+  }
+
+  .ml6-header {
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .ml6-icon {
+
+    width: 65px;
+
+    height: 65px;
+  }
+
+  .ml6-header h2 {
+
+    font-size: 21px;
+
+    letter-spacing: 2px;
+  }
+
+  .ml6-large-image {
+
+    width: 100%;
   }
 
 }
@@ -500,9 +712,9 @@ footer p {
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      NAVIGATION
-========================= -->
+===================================================== -->
 
 <nav>
 
@@ -522,12 +734,16 @@ footer p {
     About Me
   </a>
 
+  <a href="#ml6">
+    ML6
+  </a>
+
 </nav>
 
 
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
 <header class="hero">
 
@@ -551,7 +767,9 @@ footer p {
     <a
       href="#music"
       class="button">
+
       Enter
+
     </a>
 
   </div>
@@ -559,9 +777,9 @@ footer p {
 </header>
 
 
-<!-- =========================
+<!-- =====================================================
      MUSIC
-========================= -->
+===================================================== -->
 
 <section id="music">
 
@@ -602,9 +820,9 @@ footer p {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      LYRICS & CHORDS
-========================= -->
+===================================================== -->
 
 <section
   id="lyrics"
@@ -639,9 +857,9 @@ footer p {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      MY STORY
-========================= -->
+===================================================== -->
 
 <section id="story">
 
@@ -651,26 +869,30 @@ footer p {
 
   <div class="section-line"></div>
 
-  <p>
-    I have always believed music is about more than
-    simply recording songs. For me, it is about
-    creating something honest that can be shared,
-    remembered and passed on.
-  </p>
+  <div class="story-box">
 
-  <p>
-    I write and record my music at home in Airdrie,
-    Scotland. Every song has its own story, and I want
-    this site to be a place where I can share those
-    stories as well as the music.
-  </p>
+    <p>
+      I have always believed music is about more than
+      simply recording songs. For me, it is about
+      creating something honest that can be shared,
+      remembered and passed on.
+    </p>
+
+    <p>
+      I write and record my music at home in Airdrie,
+      Scotland. Every song has its own story, and I want
+      this site to be a place where I can share those
+      stories as well as the music.
+    </p>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      ABOUT ME
-========================= -->
+===================================================== -->
 
 <section id="about">
 
@@ -680,8 +902,6 @@ footer p {
 
   <div class="section-line"></div>
 
-
-  <!-- YOUR PHOTO -->
 
   <div class="bio-photo">
 
@@ -704,7 +924,6 @@ footer p {
 
     </p>
 
-
     <p>
 
       At 35, I became a heart-attack survivor.
@@ -713,7 +932,6 @@ footer p {
       of the things I love most.
 
     </p>
-
 
     <p>
 
@@ -724,7 +942,6 @@ footer p {
 
     </p>
 
-
     <p>
 
       These songs are my way of telling stories,
@@ -733,36 +950,146 @@ footer p {
 
     </p>
 
-
-    <p>
-
-      I'm also connected with the
-      <span class="highlight">
-        ML6 Community Music Group
-      </span>
-      in Airdrie.
-
-    </p>
-
-
-    <a
-      class="facebook"
-      href="https://www.facebook.com/share/g/1CCu3kpZiJ/"
-      target="_blank"
-      rel="noopener">
-
-      ML6 COMMUNITY MUSIC GROUP
-
-    </a>
-
   </div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
+     ML6 COMMUNITY MUSIC GROUP
+===================================================== -->
+
+<section
+  id="ml6"
+  class="ml6-section">
+
+
+  <!-- SMALL ML6 IMAGE + TITLE -->
+
+  <div class="ml6-header">
+
+    <img
+      src="CBEAA820-5E84-48ED-8A65-DE2308AB11C5.png"
+      alt="ML6 Music Group"
+      class="ml6-icon"
+    >
+
+    <div>
+
+      <h2>
+        ML6 Community Music Group
+      </h2>
+
+      <div class="section-line"></div>
+
+    </div>
+
+  </div>
+
+
+  <p class="ml6-intro">
+    Music should be for everyone.
+  </p>
+
+
+  <!-- EXPANDABLE ML6 STORY -->
+
+  <details class="ml6-details">
+
+    <summary>
+      Discover ML6 Community Music Group
+    </summary>
+
+
+    <div class="ml6-content">
+
+
+      <!-- LARGE ML6 IMAGE -->
+
+      <img
+        src="CBEAA820-5E84-48ED-8A65-DE2308AB11C5.png"
+        alt="ML6 Music Group"
+        class="ml6-large-image"
+      >
+
+
+      <p>
+
+        I founded the ML6 Community Music Group
+        in 2022 because I wanted to create something
+        positive, welcoming and completely
+        community-focused.
+
+      </p>
+
+
+      <p>
+
+        Every week we teach adults to play music
+        <span class="highlight">
+          completely free of charge
+        </span>.
+
+        No expensive lessons.
+        No pressure.
+        No judgement.
+
+        Just people coming together, learning,
+        playing and enjoying music as a community.
+
+      </p>
+
+
+      <p>
+
+        Whether you've never picked up an instrument
+        before or you've been playing for years,
+        you're welcome.
+
+      </p>
+
+
+      <p>
+
+        For me, ML6 is about more than learning music.
+
+        It's about bringing people together,
+        building confidence and creating a place
+        where everyone has the opportunity
+        to make music.
+
+      </p>
+
+
+      <p class="ml6-strong">
+
+        If that sounds like something you'd like
+        to be part of, come and check us out.
+
+      </p>
+
+
+      <a
+        class="facebook"
+        href="https://www.facebook.com/share/g/1CCu3kpZiJ/"
+        target="_blank"
+        rel="noopener">
+
+        CHECK OUT ML6
+
+      </a>
+
+
+    </div>
+
+  </details>
+
+</section>
+
+
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
