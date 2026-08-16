@@ -7,6 +7,7 @@
 <title>JimG3 | Music</title>
 
 <style>
+
 * {
   box-sizing: border-box;
 }
@@ -17,92 +18,99 @@ html {
 
 body {
   margin: 0;
-  background: #07110d;
-  color: #f4f0e5;
+  background: #090909;
+  color: #eeeeea;
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.75;
 }
 
-/* Celtic-inspired background detail */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.08;
-  background-image:
-    radial-gradient(circle at 20% 20%, #d6b66a 0 1px, transparent 1px),
-    radial-gradient(circle at 80% 70%, #d6b66a 0 1px, transparent 1px);
-  background-size: 90px 90px;
-  z-index: -1;
-}
-
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 14px 8px;
-  background: rgba(4, 12, 9, 0.97);
-  border-bottom: 1px solid #8c713b;
+  padding: 15px 10px;
+  background: rgba(5, 5, 5, 0.97);
+  border-bottom: 1px solid #37332d;
   z-index: 10;
   text-align: center;
 }
 
 nav a {
-  color: #d9d0b9;
+  color: #bcb9b1;
   text-decoration: none;
   margin: 0 9px;
   font-size: 11px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.6px;
   text-transform: uppercase;
 }
 
 nav a:hover {
-  color: #d6b66a;
+  color: #b08d55;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
   min-height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   text-align: center;
-  padding: 100px 25px 60px;
+
+  padding: 110px 25px 60px;
 
   background:
     radial-gradient(
       circle at center,
-      #173327 0%,
-      #09150f 48%,
-      #030705 100%
+      #252525 0%,
+      #111111 42%,
+      #050505 100%
     );
 
   position: relative;
 }
 
+/*
+Subtle Celtic-inspired corner detail.
+No symbols, no shamrocks.
+*/
+
 .hero::before,
 .hero::after {
-  content: "☘";
+  content: "";
   position: absolute;
-  color: #8c713b;
-  font-size: 46px;
-  opacity: 0.65;
+
+  width: 90px;
+  height: 90px;
+
+  border: 1px solid #51483b;
+
+  opacity: 0.55;
 }
 
 .hero::before {
-  top: 18%;
-  left: 9%;
+  top: 120px;
+  left: 35px;
+
+  border-right: none;
+  border-bottom: none;
 }
 
 .hero::after {
-  bottom: 15%;
-  right: 9%;
-  transform: rotate(180deg);
+  bottom: 45px;
+  right: 35px;
+
+  border-left: none;
+  border-top: none;
 }
 
 .hero-inner {
@@ -110,200 +118,361 @@ nav a:hover {
 }
 
 .logo {
+  font-family: Arial, Helvetica, sans-serif;
+
   font-size: clamp(55px, 15vw, 120px);
+
   font-weight: 700;
-  letter-spacing: 8px;
+
+  letter-spacing: 9px;
+
   margin: 0;
-  color: #f5f0df;
+
+  color: #f1f0ec;
 }
 
-.celtic-mark {
-  color: #c5a45d;
-  font-size: 30px;
-  letter-spacing: 12px;
-  margin: 12px 0;
-}
-
-.line {
-  width: 90px;
+.celtic-line {
+  width: 170px;
   height: 1px;
-  background: #c5a45d;
-  margin: 20px auto;
+
+  margin: 25px auto;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    #a98755,
+    transparent
+  );
 }
 
 .subtitle {
-  font-size: 17px;
-  letter-spacing: 4px;
+  font-size: 16px;
+
+  letter-spacing: 5px;
+
   text-transform: uppercase;
-  color: #d0c5a8;
+
+  color: #aaa79f;
 }
 
 .intro {
   max-width: 650px;
+
   margin: 30px auto 0;
-  color: #c8c0ac;
+
+  color: #aaa79f;
+
   font-size: 17px;
 }
 
-.button,
-.facebook {
+.button {
   display: inline-block;
-  margin-top: 28px;
-  padding: 12px 25px;
-  border: 1px solid #9d8247;
-  color: #f5f0df;
+
+  margin-top: 30px;
+
+  padding: 13px 28px;
+
+  border: 1px solid #6f604c;
+
+  color: #e7e3da;
+
   text-decoration: none;
+
   letter-spacing: 2px;
+
   text-transform: uppercase;
+
   font-size: 12px;
 }
 
-.button:hover,
-.facebook:hover {
-  background: #c5a45d;
-  color: #07110d;
+.button:hover {
+  background: #a98755;
+  color: #090909;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section {
   max-width: 950px;
+
   margin: auto;
+
   padding: 90px 25px;
 }
 
 h2 {
+  font-family: Arial, Helvetica, sans-serif;
+
   font-size: 30px;
+
   letter-spacing: 4px;
+
   text-transform: uppercase;
-  margin-bottom: 18px;
-  color: #eee6d2;
+
+  margin-bottom: 20px;
+
+  color: #e9e7e1;
 }
 
 .section-line {
   width: 55px;
   height: 1px;
-  background: #c5a45d;
+
+  background: #a98755;
+
   margin-bottom: 30px;
 }
 
 p {
-  color: #c7c0af;
+  color: #b5b2aa;
+
   font-size: 17px;
 }
 
 .highlight {
-  color: #f4ead1;
+  color: #eeeae0;
 }
 
-/* MUSIC / LYRICS BOXES */
+/* =========================
+   CELTIC BORDER EFFECT
+========================= */
 
-.music-box,
-.lyrics-box,
-.coming-box {
-  border: 1px solid #405646;
-  padding: 30px 25px;
-  margin-top: 25px;
-  background: rgba(4, 12, 9, 0.75);
+.celtic-border {
   position: relative;
+
+  border: 1px solid #302d28;
+
+  padding: 30px 25px;
+
+  margin-top: 25px;
+
+  background: #0d0d0d;
 }
 
-.music-box::before,
-.lyrics-box::before,
-.coming-box::before {
-  content: "✦";
+.celtic-border::before,
+.celtic-border::after {
+  content: "";
+
   position: absolute;
-  top: 10px;
-  right: 15px;
-  color: #c5a45d;
+
+  width: 35px;
+  height: 35px;
+
+  border: 1px solid #625442;
+
+  opacity: 0.7;
 }
 
-.music-box h3,
-.lyrics-box h3,
-.coming-box h3 {
+.celtic-border::before {
+  top: -1px;
+  left: -1px;
+
+  border-right: none;
+  border-bottom: none;
+}
+
+.celtic-border::after {
+  bottom: -1px;
+  right: -1px;
+
+  border-left: none;
+  border-top: none;
+}
+
+.celtic-border h3 {
   margin-top: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
   letter-spacing: 2px;
-  color: #f4ead1;
+
+  color: #e7e2d7;
 }
 
-.soon {
+/* =========================
+   MUSIC
+========================= */
+
+.music-box {
+  position: relative;
+
+  border: 1px solid #302d28;
+
+  padding: 30px 25px;
+
+  margin-top: 25px;
+
+  background: #0d0d0d;
+}
+
+.music-box h3 {
+  margin-top: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  letter-spacing: 2px;
+}
+
+.coming-soon {
   display: inline-block;
+
+  margin: 7px 7px 0 0;
+
   padding: 7px 12px;
-  border: 1px solid #6e5a34;
-  color: #c5a45d;
-  font-size: 11px;
-  letter-spacing: 1.5px;
+
+  border: 1px solid #51483b;
+
+  color: #a98755;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 1.4px;
+
   text-transform: uppercase;
-  margin: 5px 6px 0 0;
 }
 
-/* STORY */
+/* =========================
+   LYRICS
+========================= */
 
 .story {
-  background: rgba(10, 27, 20, 0.72);
-  border-top: 1px solid #344b3d;
-  border-bottom: 1px solid #344b3d;
+  background: #0d0d0d;
+
+  border-top: 1px solid #292724;
+
+  border-bottom: 1px solid #292724;
 }
 
-/* ABOUT */
+.lyrics-box {
+  border: 1px solid #302d28;
+
+  padding: 30px 25px;
+
+  margin-top: 25px;
+
+  background: #090909;
+}
+
+.lyrics-box h3 {
+  margin-top: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  letter-spacing: 2px;
+}
+
+/* =========================
+   ABOUT
+========================= */
 
 .about-box {
-  border-left: 1px solid #9d8247;
+  border-left: 1px solid #776247;
+
   padding-left: 25px;
 }
 
 .bio-photo {
   width: 190px;
   height: 190px;
+
   border-radius: 50%;
-  border: 2px solid #9d8247;
+
+  border: 1px solid #776247;
+
   margin: 0 auto 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   overflow: hidden;
 
   box-shadow:
-    0 0 0 8px rgba(157, 130, 71, 0.08);
+    0 0 0 7px rgba(119, 98, 71, 0.08);
 }
 
 .bio-photo img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
 
-/* FOOTER */
+/* =========================
+   FACEBOOK
+========================= */
+
+.facebook {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  padding: 12px 20px;
+
+  border: 1px solid #51483b;
+
+  color: #e7e3da;
+
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+.facebook:hover {
+  background: #a98755;
+
+  color: #090909;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
   text-align: center;
+
   padding: 50px 25px;
-  border-top: 1px solid #344b3d;
-  color: #7f806f;
+
+  border-top: 1px solid #292724;
+
+  color: #65625c;
+
   font-size: 13px;
 }
 
 footer p {
-  color: #7f806f;
+  color: #65625c;
+
   font-size: 13px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 
   nav {
-    padding: 13px 4px;
+    padding: 14px 4px;
   }
 
   nav a {
     margin: 0 4px;
+
     font-size: 9px;
+
     letter-spacing: 1px;
   }
 
   .subtitle {
     font-size: 13px;
+
     letter-spacing: 2px;
   }
 
@@ -317,43 +486,58 @@ footer p {
 
   .hero::before,
   .hero::after {
-    font-size: 30px;
+    width: 55px;
+    height: 55px;
   }
+
 }
+
 </style>
 
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
-  <a href="#music">Music</a>
+  <a href="#music">
+    Music
+  </a>
 
-  <a href="#lyrics">Lyrics & Chords</a>
+  <a href="#lyrics">
+    Lyrics & Chords
+  </a>
 
-  <a href="#story">My Story</a>
+  <a href="#story">
+    My Story
+  </a>
 
-  <a href="#about">About Me</a>
+  <a href="#about">
+    About Me
+  </a>
 
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
 
   <div class="hero-inner">
 
-    <h1 class="logo">JimG3</h1>
+    <h1 class="logo">
+      JimG3
+    </h1>
 
-    <div class="celtic-mark">
-      ᚛ ✦ ᚜
-    </div>
-
-    <div class="line"></div>
+    <div class="celtic-line"></div>
 
     <div class="subtitle">
       Songs · Stories · Life
@@ -364,7 +548,9 @@ footer p {
       in Airdrie, Scotland.
     </p>
 
-    <a href="#music" class="button">
+    <a
+      href="#music"
+      class="button">
       Enter
     </a>
 
@@ -373,11 +559,15 @@ footer p {
 </header>
 
 
-<!-- MUSIC -->
+<!-- =========================
+     MUSIC
+========================= -->
 
 <section id="music">
 
-  <h2>Music</h2>
+  <h2>
+    Music
+  </h2>
 
   <div class="section-line"></div>
 
@@ -389,19 +579,21 @@ footer p {
 
   <div class="music-box">
 
-    <h3>THE MUSIC</h3>
+    <h3>
+      THE MUSIC
+    </h3>
 
     <p>
       My songs and recordings will appear here.
-      Each track can eventually have its own artwork,
-      recording, lyrics, chords and story.
+      Each track will eventually have its own
+      artwork, recording, lyrics, chords and story.
     </p>
 
-    <span class="soon">
+    <span class="coming-soon">
       Streaming · Coming Soon
     </span>
 
-    <span class="soon">
+    <span class="coming-soon">
       Vinyl · Coming Soon
     </span>
 
@@ -410,11 +602,17 @@ footer p {
 </section>
 
 
-<!-- LYRICS -->
+<!-- =========================
+     LYRICS & CHORDS
+========================= -->
 
-<section id="lyrics" class="story">
+<section
+  id="lyrics"
+  class="story">
 
-  <h2>Lyrics & Chords</h2>
+  <h2>
+    Lyrics & Chords
+  </h2>
 
   <div class="section-line"></div>
 
@@ -426,7 +624,9 @@ footer p {
 
   <div class="lyrics-box">
 
-    <h3>PLAY ALONG</h3>
+    <h3>
+      PLAY ALONG
+    </h3>
 
     <p>
       Lyrics and guitar chords will be added here,
@@ -439,11 +639,15 @@ footer p {
 </section>
 
 
-<!-- MY STORY -->
+<!-- =========================
+     MY STORY
+========================= -->
 
 <section id="story">
 
-  <h2>My Story</h2>
+  <h2>
+    My Story
+  </h2>
 
   <div class="section-line"></div>
 
@@ -464,11 +668,15 @@ footer p {
 </section>
 
 
-<!-- ABOUT ME -->
+<!-- =========================
+     ABOUT ME
+========================= -->
 
 <section id="about">
 
-  <h2>About Me</h2>
+  <h2>
+    About Me
+  </h2>
 
   <div class="section-line"></div>
 
@@ -488,50 +696,63 @@ footer p {
   <div class="about-box">
 
     <p>
+
       <span class="highlight">
         I'm a dad of three girls, a songwriter
         and a musician.
       </span>
+
     </p>
 
+
     <p>
+
       At 35, I became a heart-attack survivor.
       I'm disabled, and life has changed in ways
       I never expected, but music has remained one
       of the things I love most.
+
     </p>
 
+
     <p>
+
       I play multiple instruments while I still can.
       I write, record and make music because I want
       to keep doing what I love and share it with
       other people.
+
     </p>
 
+
     <p>
+
       These songs are my way of telling stories,
       making memories and putting something of myself
       into the world.
+
     </p>
 
+
     <p>
+
       I'm also connected with the
       <span class="highlight">
         ML6 Community Music Group
       </span>
       in Airdrie.
+
     </p>
 
-
-    <!-- FACEBOOK -->
 
     <a
       class="facebook"
       href="https://www.facebook.com/share/g/1CCu3kpZiJ/"
       target="_blank"
-      rel="noopener"
-    >
+      rel="noopener">
+
       ML6 COMMUNITY MUSIC GROUP
+
     </a>
 
   </div>
@@ -539,7 +760,9 @@ footer p {
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -553,5 +776,7 @@ footer p {
 
 </footer>
 
+
 </body>
+
 </html>
