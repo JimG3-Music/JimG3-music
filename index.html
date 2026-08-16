@@ -1,111 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jim G3 | Music</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<title>JimG3 | Music</title>
 
-    body {
-      margin: 0;
-      background: #050505;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    header {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 30px;
-      background: linear-gradient(
-        rgba(0,0,0,.45),
-        rgba(0,0,0,.9)
-      );
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    h1 {
-      font-size: 64px;
-      margin: 0;
-      letter-spacing: 5px;
-    }
+body {
+  margin: 0;
+  background: #080808;
+  color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
 
-    .tagline {
-      font-size: 20px;
-      margin-top: 15px;
-      color: #ccc;
-    }
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 25px;
+  background: rgba(5,5,5,0.94);
+  border-bottom: 1px solid #222;
+  z-index: 10;
+  text-align: center;
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 15px 30px;
-      border: 1px solid white;
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
+nav a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
-    section {
-      padding: 70px 25px;
-      max-width: 900px;
-      margin: auto;
-    }
+nav a:hover {
+  color: white;
+}
 
-    h2 {
-      font-size: 34px;
-      letter-spacing: 3px;
-    }
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 25px 60px;
+  background:
+    radial-gradient(circle at center, #202020 0%, #0b0b0b 45%, #050505 100%);
+}
 
-    p {
-      color: #ccc;
-      line-height: 1.7;
-      font-size: 17px;
-    }
+.hero-inner {
+  max-width: 900px;
+}
 
-    footer {
-      padding: 30px;
-      border-top: 1px solid #222;
-      color: #777;
-    }
-  </style>
+.logo {
+  font-size: clamp(55px, 15vw, 120px);
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin: 0;
+}
+
+.line {
+  width: 70px;
+  height: 1px;
+  background: #777;
+  margin: 28px auto;
+}
+
+.subtitle {
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #aaa;
+}
+
+.intro {
+  max-width: 650px;
+  margin: 35px auto 0;
+  color: #bbb;
+  font-size: 17px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 35px;
+  padding: 13px 28px;
+  border: 1px solid #777;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.button:hover {
+  background: white;
+  color: black;
+}
+
+section {
+  max-width: 950px;
+  margin: auto;
+  padding: 100px 25px;
+}
+
+h2 {
+  font-size: 32px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.section-line {
+  width: 45px;
+  height: 1px;
+  background: #777;
+  margin-bottom: 30px;
+}
+
+p {
+  color: #bbb;
+  font-size: 17px;
+}
+
+.about-box {
+  border-left: 1px solid #555;
+  padding-left: 25px;
+}
+
+.highlight {
+  color: white;
+}
+
+.music-placeholder {
+  border: 1px solid #292929;
+  padding: 35px 25px;
+  margin-top: 25px;
+  background: #0d0d0d;
+}
+
+.music-placeholder h3 {
+  margin-top: 0;
+  letter-spacing: 2px;
+}
+
+.music-placeholder p {
+  margin-bottom: 0;
+  color: #888;
+}
+
+.story {
+  background: #0d0d0d;
+  border-top: 1px solid #202020;
+  border-bottom: 1px solid #202020;
+}
+
+footer {
+  text-align: center;
+  padding: 50px 25px;
+  border-top: 1px solid #222;
+  color: #666;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+  nav {
+    padding: 15px 8px;
+  }
+
+  nav a {
+    margin: 0 5px;
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  section {
+    padding: 75px 22px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>JIM G3</h1>
-    <div class="tagline">MUSIC • STORIES • REAL LIFE</div>
-    <a href="#music" class="button">Enter</a>
-  </header>
+<nav>
+  <a href="#music">Music</a>
+  <a href="#story">Story</a>
+  <a href="#about">About</a>
+</nav>
 
-  <section id="music">
-    <h2>MUSIC</h2>
-    <p>
-      Welcome to the official Jim G3 music site.
-      Music, stories and songs written from real life.
+<header class="hero">
+
+  <div class="hero-inner">
+
+    <h1 class="logo">JimG3</h1>
+
+    <div class="line"></div>
+
+    <div class="subtitle">
+      Songs. Stories. Life.
+    </div>
+
+    <p class="intro">
+      A collection of songs written and performed from home
+      in Airdrie, Scotland.
     </p>
-  </section>
 
-  <section>
-    <h2>ABOUT</h2>
+    <a href="#music" class="button">
+      Enter
+    </a>
+
+  </div>
+
+</header>
+
+<section id="music">
+
+  <h2>Music</h2>
+
+  <div class="section-line"></div>
+
+  <p>
+    The music doesn't belong to one genre.
+    Each song is allowed to be what the story needs it to be.
+  </p>
+
+  <div class="music-placeholder">
+
+    <h3>THE MUSIC</h3>
+
     <p>
-      Jim G3 is an independent artist creating music
-      with honesty, emotion and a message.
+      Songs and recordings will appear here.
+      Individual tracks will include their artwork,
+      genre, lyrics and recording information.
     </p>
-  </section>
 
-  <footer>
-    © 2026 Jim G3
-  </footer>
+  </div>
+
+</section>
+
+<section id="story" class="story">
+
+  <h2>The Story</h2>
+
+  <div class="section-line"></div>
+
+  <p>
+    JimG3 is a songwriter and musician from Airdrie, Scotland,
+    and a dad of three girls.
+  </p>
+
+  <p>
+    This project is about completing a goal set for his family
+    and creating a collection of songs that can be remembered.
+  </p>
+
+  <p>
+    Every recording is made at home in Airdrie.
+  </p>
+
+</section>
+
+<section id="about">
+
+  <h2>About JimG3</h2>
+
+  <div class="section-line"></div>
+
+  <div class="about-box">
+
+    <p>
+      <span class="highlight">Dad of three girls.</span>
+      Songwriter. Musician.
+    </p>
+
+    <p>
+      All songs are written and performed by JimG3
+      unless otherwise stated.
+    </p>
+
+    <p>
+      Members of the
+      <span class="highlight">ML6 Community Music Group</span>
+      may join JimG3 on selected recordings and performances.
+    </p>
+
+    <p>
+      JimG3 founded and runs the ML6 Community Music Group
+      in Airdrie.
+    </p>
+
+    <p>
+      All recordings are made at home in Airdrie, Scotland.
+    </p>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>JimG3</p>
+
+  <p>
+    © 2026 JimG3 · Airdrie, Scotland
+  </p>
+
+</footer>
 
 </body>
 </html>
