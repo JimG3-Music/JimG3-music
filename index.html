@@ -17,36 +17,54 @@ html {
 
 body {
   margin: 0;
-  background: #080808;
-  color: #f2f2f2;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.7;
+  background: #07110d;
+  color: #f4f0e5;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.75;
 }
+
+/* Celtic-inspired background detail */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image:
+    radial-gradient(circle at 20% 20%, #d6b66a 0 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, #d6b66a 0 1px, transparent 1px);
+  background-size: 90px 90px;
+  z-index: -1;
+}
+
+/* NAVIGATION */
 
 nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 16px 10px;
-  background: rgba(5,5,5,0.96);
-  border-bottom: 1px solid #222;
+  padding: 14px 8px;
+  background: rgba(4, 12, 9, 0.97);
+  border-bottom: 1px solid #8c713b;
   z-index: 10;
   text-align: center;
 }
 
 nav a {
-  color: #ccc;
+  color: #d9d0b9;
   text-decoration: none;
-  margin: 0 8px;
+  margin: 0 9px;
   font-size: 11px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
 nav a:hover {
-  color: white;
+  color: #d6b66a;
 }
+
+/* HERO */
 
 .hero {
   min-height: 100vh;
@@ -55,8 +73,36 @@ nav a:hover {
   justify-content: center;
   text-align: center;
   padding: 100px 25px 60px;
+
   background:
-    radial-gradient(circle at center, #202020 0%, #0b0b0b 45%, #050505 100%);
+    radial-gradient(
+      circle at center,
+      #173327 0%,
+      #09150f 48%,
+      #030705 100%
+    );
+
+  position: relative;
+}
+
+.hero::before,
+.hero::after {
+  content: "☘";
+  position: absolute;
+  color: #8c713b;
+  font-size: 46px;
+  opacity: 0.65;
+}
+
+.hero::before {
+  top: 18%;
+  left: 9%;
+}
+
+.hero::after {
+  bottom: 15%;
+  right: 9%;
+  transform: rotate(180deg);
 }
 
 .hero-inner {
@@ -68,45 +114,57 @@ nav a:hover {
   font-weight: 700;
   letter-spacing: 8px;
   margin: 0;
+  color: #f5f0df;
+}
+
+.celtic-mark {
+  color: #c5a45d;
+  font-size: 30px;
+  letter-spacing: 12px;
+  margin: 12px 0;
 }
 
 .line {
-  width: 70px;
+  width: 90px;
   height: 1px;
-  background: #777;
-  margin: 28px auto;
+  background: #c5a45d;
+  margin: 20px auto;
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: 17px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #aaa;
+  color: #d0c5a8;
 }
 
 .intro {
   max-width: 650px;
-  margin: 35px auto 0;
-  color: #bbb;
+  margin: 30px auto 0;
+  color: #c8c0ac;
   font-size: 17px;
 }
 
-.button {
+.button,
+.facebook {
   display: inline-block;
-  margin-top: 30px;
-  padding: 13px 28px;
-  border: 1px solid #777;
-  color: white;
+  margin-top: 28px;
+  padding: 12px 25px;
+  border: 1px solid #9d8247;
+  color: #f5f0df;
   text-decoration: none;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 12px;
 }
 
-.button:hover {
-  background: white;
-  color: black;
+.button:hover,
+.facebook:hover {
+  background: #c5a45d;
+  color: #07110d;
 }
+
+/* SECTIONS */
 
 section {
   max-width: 950px;
@@ -118,99 +176,124 @@ h2 {
   font-size: 30px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin-bottom: 18px;
+  color: #eee6d2;
 }
 
 .section-line {
-  width: 45px;
+  width: 55px;
   height: 1px;
-  background: #777;
+  background: #c5a45d;
   margin-bottom: 30px;
 }
 
 p {
-  color: #bbb;
+  color: #c7c0af;
   font-size: 17px;
 }
 
 .highlight {
-  color: white;
+  color: #f4ead1;
 }
 
+/* MUSIC / LYRICS BOXES */
+
 .music-box,
-.lyrics-box {
-  border: 1px solid #292929;
+.lyrics-box,
+.coming-box {
+  border: 1px solid #405646;
   padding: 30px 25px;
   margin-top: 25px;
-  background: #0d0d0d;
+  background: rgba(4, 12, 9, 0.75);
+  position: relative;
+}
+
+.music-box::before,
+.lyrics-box::before,
+.coming-box::before {
+  content: "✦";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #c5a45d;
 }
 
 .music-box h3,
-.lyrics-box h3 {
+.lyrics-box h3,
+.coming-box h3 {
   margin-top: 0;
   letter-spacing: 2px;
-  color: white;
+  color: #f4ead1;
 }
+
+.soon {
+  display: inline-block;
+  padding: 7px 12px;
+  border: 1px solid #6e5a34;
+  color: #c5a45d;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 5px 6px 0 0;
+}
+
+/* STORY */
 
 .story {
-  background: #0d0d0d;
-  border-top: 1px solid #202020;
-  border-bottom: 1px solid #202020;
+  background: rgba(10, 27, 20, 0.72);
+  border-top: 1px solid #344b3d;
+  border-bottom: 1px solid #344b3d;
 }
 
+/* ABOUT */
+
 .about-box {
-  border-left: 1px solid #555;
+  border-left: 1px solid #9d8247;
   padding-left: 25px;
 }
 
 .bio-photo {
-  width: 180px;
-  height: 180px;
+  width: 190px;
+  height: 190px;
   border-radius: 50%;
-  border: 1px solid #555;
+  border: 2px solid #9d8247;
   margin: 0 auto 35px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  color: #777;
-  font-size: 12px;
-  letter-spacing: 1px;
+  overflow: hidden;
+
+  box-shadow:
+    0 0 0 8px rgba(157, 130, 71, 0.08);
 }
 
-.facebook {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 20px;
-  border: 1px solid #555;
-  color: white;
-  text-decoration: none;
-  font-size: 13px;
-  letter-spacing: 1px;
+.bio-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.facebook:hover {
-  background: white;
-  color: black;
-}
+/* FOOTER */
 
 footer {
   text-align: center;
   padding: 50px 25px;
-  border-top: 1px solid #222;
-  color: #666;
+  border-top: 1px solid #344b3d;
+  color: #7f806f;
   font-size: 13px;
 }
 
 footer p {
-  color: #666;
+  color: #7f806f;
   font-size: 13px;
 }
+
+/* MOBILE */
 
 @media (max-width: 600px) {
 
   nav {
-    padding: 14px 5px;
+    padding: 13px 4px;
   }
 
   nav a {
@@ -231,18 +314,34 @@ footer p {
   h2 {
     font-size: 25px;
   }
+
+  .hero::before,
+  .hero::after {
+    font-size: 30px;
+  }
 }
 </style>
+
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
+
   <a href="#music">Music</a>
+
   <a href="#lyrics">Lyrics & Chords</a>
-  <a href="#story">Story</a>
-  <a href="#about">About</a>
+
+  <a href="#story">My Story</a>
+
+  <a href="#about">About Me</a>
+
 </nav>
+
+
+<!-- HERO -->
 
 <header class="hero">
 
@@ -250,14 +349,19 @@ footer p {
 
     <h1 class="logo">JimG3</h1>
 
+    <div class="celtic-mark">
+      ᚛ ✦ ᚜
+    </div>
+
     <div class="line"></div>
 
     <div class="subtitle">
-      Songs. Stories. Life.
+      Songs · Stories · Life
     </div>
 
     <p class="intro">
-      Songs written and performed from home in Airdrie, Scotland.
+      I write, play and record my music from home
+      in Airdrie, Scotland.
     </p>
 
     <a href="#music" class="button">
@@ -268,6 +372,9 @@ footer p {
 
 </header>
 
+
+<!-- MUSIC -->
+
 <section id="music">
 
   <h2>Music</h2>
@@ -275,8 +382,9 @@ footer p {
   <div class="section-line"></div>
 
   <p>
-    The music doesn't belong to one genre.
-    Each song is allowed to be what the story needs it to be.
+    My music doesn't belong to one genre.
+    I let each song become what the story needs
+    it to be.
   </p>
 
   <div class="music-box">
@@ -284,14 +392,25 @@ footer p {
     <h3>THE MUSIC</h3>
 
     <p>
-      Songs and recordings will appear here.
-      Individual tracks will eventually include artwork,
-      recordings, lyrics and information about each song.
+      My songs and recordings will appear here.
+      Each track can eventually have its own artwork,
+      recording, lyrics, chords and story.
     </p>
+
+    <span class="soon">
+      Streaming · Coming Soon
+    </span>
+
+    <span class="soon">
+      Vinyl · Coming Soon
+    </span>
 
   </div>
 
 </section>
+
+
+<!-- LYRICS -->
 
 <section id="lyrics" class="story">
 
@@ -300,92 +419,118 @@ footer p {
   <div class="section-line"></div>
 
   <p>
-    Play along with Jim.
+    Want to play along?
+    This is where I'll share the lyrics and chords
+    for my songs.
   </p>
 
   <div class="lyrics-box">
 
-    <h3>SONG LYRICS & CHORDS</h3>
+    <h3>PLAY ALONG</h3>
 
     <p>
-      Lyrics and guitar chords for Jim's songs will appear here.
-    </p>
-
-    <p>
-      Chords will be placed above the lyrics so musicians can
-      play along with the recordings.
+      Lyrics and guitar chords will be added here,
+      with the chords placed above the lyrics so
+      musicians can play along with the recordings.
     </p>
 
   </div>
 
 </section>
 
+
+<!-- MY STORY -->
+
 <section id="story">
 
-  <h2>The Story</h2>
+  <h2>My Story</h2>
 
   <div class="section-line"></div>
 
   <p>
-    Jim is a songwriter and musician from Airdrie, Scotland,
-    and a dad of three girls.
+    I have always believed music is about more than
+    simply recording songs. For me, it is about
+    creating something honest that can be shared,
+    remembered and passed on.
   </p>
 
   <p>
-    Music has always been about more than simply recording songs.
-    It's about creating something that can be shared, remembered
-    and passed on.
-  </p>
-
-  <p>
-    Every recording is made at home in Airdrie.
+    I write and record my music at home in Airdrie,
+    Scotland. Every song has its own story, and I want
+    this site to be a place where I can share those
+    stories as well as the music.
   </p>
 
 </section>
 
+
+<!-- ABOUT ME -->
+
 <section id="about">
 
-  <h2>About Jim</h2>
+  <h2>About Me</h2>
 
   <div class="section-line"></div>
 
+
+  <!-- YOUR PHOTO -->
+
   <div class="bio-photo">
-  <img src="361FAE5C-E8E1-4938-971B-6C4EF07931E4.png" alt="Jim" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-</div>
+
+    <img
+      src="361FAE5C-E8E1-4938-971B-6C4EF07931E4.png"
+      alt="Jim"
+    >
+
+  </div>
+
 
   <div class="about-box">
 
     <p>
-      <span class="highlight">Dad of three girls.</span>
-      Songwriter. Musician.
+      <span class="highlight">
+        I'm a dad of three girls, a songwriter
+        and a musician.
+      </span>
     </p>
 
     <p>
-      At just 35, Jim became a heart attack survivor.
-      Life changed, but music remained one of the things
-      that mattered most.
+      At 35, I became a heart-attack survivor.
+      I'm disabled, and life has changed in ways
+      I never expected, but music has remained one
+      of the things I love most.
     </p>
 
     <p>
-      Now Jim is sharing what he loves most:
-      writing songs, making music and telling stories through it.
+      I play multiple instruments while I still can.
+      I write, record and make music because I want
+      to keep doing what I love and share it with
+      other people.
     </p>
 
     <p>
-      All songs are written and performed by Jim
-      unless otherwise stated.
+      These songs are my way of telling stories,
+      making memories and putting something of myself
+      into the world.
     </p>
 
     <p>
-      Jim is also connected with the
-      <span class="highlight">ML6 Community Music Group</span>
+      I'm also connected with the
+      <span class="highlight">
+        ML6 Community Music Group
+      </span>
       in Airdrie.
     </p>
+
+
+    <!-- FACEBOOK -->
 
     <a
       class="facebook"
       href="https://www.facebook.com/share/g/1CCu3kpZiJ/"
-      target="_blank">
+      target="_blank"
+      rel="noopener"
+    >
       ML6 COMMUNITY MUSIC GROUP
     </a>
 
@@ -393,12 +538,17 @@ footer p {
 
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
 
-  <p>Jim</p>
+  <p>
+    JimG3 · Music from Airdrie, Scotland
+  </p>
 
   <p>
-    © 2026 Jim · Airdrie, Scotland
+    © 2026 Jim
   </p>
 
 </footer>
