@@ -255,7 +255,7 @@ p {
 .song-box {
   position: relative;
   border: 1px solid #776247;
-  padding: 32px 25px;
+  padding: 35px 30px;
   margin-top: 30px;
   background: #0d0d0d;
 }
@@ -265,23 +265,31 @@ p {
   position: absolute;
   top: -1px;
   left: 20px;
-  width: 75px;
+  width: 80px;
   height: 1px;
   background: #a98755;
 }
 
-.song-box h3 {
-  margin-top: 0;
-  margin-bottom: 5px;
+.song-label {
+  color: #a98755;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
   letter-spacing: 2px;
-  color: #e7e2d7;
-  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.song-box h3 {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 27px;
+  letter-spacing: 1px;
   line-height: 1.4;
+  color: #eeeae0;
 }
 
 .song-dedication {
-  margin-top: 0;
+  margin-top: 8px;
   color: #a98755;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -290,30 +298,37 @@ p {
 }
 
 .song-story {
-  margin-top: 25px;
+  margin-top: 28px;
 }
 
 .song-story p {
-  color: #b5b2aa;
+  max-width: 760px;
 }
 
 .song-quote {
   margin: 30px 0;
-  padding: 20px 25px;
+  padding: 22px 25px;
+
   border-left: 1px solid #a98755;
+
   background: #090909;
-  color: #e7e2d7;
-  font-size: 19px;
+
+  color: #eeeae0;
+
+  font-size: 20px;
+
   font-style: italic;
+
+  line-height: 1.6;
 }
 
 .song-for {
-  text-align: center;
   color: #e7e2d7 !important;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px !important;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .song-buttons {
@@ -325,14 +340,23 @@ p {
 
 .song-button {
   display: inline-block;
-  padding: 13px 20px;
+
+  padding: 13px 22px;
+
   border: 1px solid #6f604c;
+
   color: #e7e3da;
+
   text-decoration: none;
+
   letter-spacing: 1.5px;
+
   text-transform: uppercase;
+
   font-family: Arial, Helvetica, sans-serif;
+
   font-size: 11px;
+
   transition: 0.25s ease;
 }
 
@@ -375,6 +399,20 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 2px;
   color: #e7e2d7;
+}
+
+.lyrics-song-title {
+  color: #e7e2d7 !important;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px !important;
+  letter-spacing: 1px;
+}
+
+.lyrics-status {
+  color: #a98755 !important;
+  font-size: 13px !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 
@@ -717,6 +755,27 @@ footer p {
     height: 55px;
   }
 
+  .song-box {
+    padding: 28px 20px;
+  }
+
+  .song-box h3 {
+    font-size: 22px;
+  }
+
+  .song-quote {
+    font-size: 17px;
+  }
+
+  .song-buttons {
+    flex-direction: column;
+  }
+
+  .song-button {
+    width: 100%;
+    text-align: center;
+  }
+
   .ml6-header {
     align-items: flex-start;
     gap: 15px;
@@ -741,27 +800,6 @@ footer p {
     padding: 16px 10px;
   }
 
-  .song-box {
-    padding: 28px 20px;
-  }
-
-  .song-box h3 {
-    font-size: 21px;
-  }
-
-  .song-buttons {
-    flex-direction: column;
-  }
-
-  .song-button {
-    width: 100%;
-    text-align: center;
-  }
-
-  .song-quote {
-    font-size: 17px;
-  }
-
 }
 
 </style>
@@ -783,7 +821,7 @@ footer p {
   </a>
 
   <a href="#lyrics">
-    Lyrics & Chords
+    Lyrics
   </a>
 
   <a href="#story">
@@ -796,17 +834,6 @@ footer p {
 
   <a href="#ml6">
     ML6CMG
-  </a>
-
-  <!-- DIRECT LINK TO ML6CMG WEBSITE -->
-
-  <a
-    href="https://jimg3-music.github.io/ML6-Community-Music-Group/"
-    target="_blank"
-    rel="noopener noreferrer">
-
-    Visit ML6CMG
-
   </a>
 
 </nav>
@@ -868,10 +895,14 @@ footer p {
 
 
   <!-- =================================================
-       NEW FEATURED SONG
+       FEATURED RELEASE
   ================================================== -->
 
   <div class="song-box">
+
+    <div class="song-label">
+      Featured Release
+    </div>
 
     <h3>
       I’ll slow dance with you, one day.
@@ -966,18 +997,19 @@ footer p {
   </div>
 
 
-  <!-- EXISTING MUSIC BOX -->
+  <!-- =================================================
+       MORE MUSIC
+  ================================================== -->
 
   <div class="music-box">
 
     <h3>
-      THE MUSIC
+      MORE MUSIC
     </h3>
 
     <p>
-      My songs and recordings will appear here.
-      Each track will eventually have its own
-      artwork, recording, lyrics, chords and story.
+      More songs will be added here as they're
+      recorded and released.
     </p>
 
     <span class="coming-soon">
@@ -1013,17 +1045,34 @@ footer p {
     for my songs.
   </p>
 
+
   <div class="lyrics-box">
 
     <h3>
-      PLAY ALONG
+      I’LL SLOW DANCE WITH YOU, ONE DAY.
     </h3>
 
-    <p>
-      Lyrics and guitar chords will be added here,
-      with the chords placed above the lyrics so
-      musicians can play along with the recordings.
+    <p class="lyrics-song-title">
+      Lyrics
     </p>
+
+    <p>
+      The complete lyrics are available on a
+      separate page, with chords to be added later.
+    </p>
+
+    <p class="lyrics-status">
+      Chords · Coming Soon
+    </p>
+
+
+    <a
+      href="i-ll-slow-dance-with-you-one-day.html"
+      class="song-button">
+
+      Read the Lyrics
+
+    </a>
 
   </div>
 
