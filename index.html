@@ -210,108 +210,151 @@ p {
    MUSIC
 ===================================================== */
 
-.music-box {
-  position: relative;
+.music-section {
+  background: #090909;
+}
+
+
+/* =====================================================
+   SONG LIST
+===================================================== */
+
+.song-list {
+  margin-top: 30px;
+}
+
+
+/* =====================================================
+   SONG ITEM
+===================================================== */
+
+.song-item {
   border: 1px solid #302d28;
-  padding: 30px 25px;
-  margin-top: 25px;
   background: #0d0d0d;
+  margin-bottom: 15px;
+  overflow: hidden;
 }
 
-.music-box::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: 20px;
-  width: 55px;
-  height: 1px;
-  background: #a98755;
-}
 
-.music-box h3 {
-  margin-top: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 2px;
+/* =====================================================
+   CLICKABLE SONG TITLE
+===================================================== */
+
+.song-item summary {
+  cursor: pointer;
+  list-style: none;
+
+  padding: 25px 28px;
+
   color: #e7e2d7;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 20px;
+
+  letter-spacing: 1px;
+
+  position: relative;
+
+  transition: 0.25s ease;
 }
 
-.coming-soon {
-  display: inline-block;
-  margin: 7px 7px 0 0;
-  padding: 7px 12px;
-  border: 1px solid #51483b;
+.song-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.song-item summary::after {
+  content: "+";
+
+  position: absolute;
+
+  right: 25px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
   color: #a98755;
+
+  font-size: 25px;
+
+  font-weight: 300;
+}
+
+.song-item[open] summary::after {
+  content: "−";
+}
+
+.song-item summary:hover {
+  color: #a98755;
+  background: #111111;
+}
+
+
+/* =====================================================
+   SONG CONTENT
+===================================================== */
+
+.song-content {
+  border-top: 1px solid #292724;
+
+  padding: 30px 28px 35px;
+
+  background: #090909;
+}
+
+.song-label {
+  color: #a98755;
+
   font-family: Arial, Helvetica, sans-serif;
+
   font-size: 10px;
-  letter-spacing: 1.4px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.song-dedication {
+  color: #a98755 !important;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 12px !important;
+
+  letter-spacing: 2px;
+
   text-transform: uppercase;
 }
 
 
 /* =====================================================
-   FEATURED SONG
+   SONG STORY
 ===================================================== */
 
-.song-box {
-  position: relative;
-  border: 1px solid #776247;
-  padding: 35px 30px;
-  margin-top: 30px;
-  background: #0d0d0d;
-}
-
-.song-box::before {
-  content: "";
-  position: absolute;
-  top: -1px;
-  left: 20px;
-  width: 80px;
-  height: 1px;
-  background: #a98755;
-}
-
-.song-label {
-  color: #a98755;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.song-box h3 {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 27px;
-  letter-spacing: 1px;
-  line-height: 1.4;
-  color: #eeeae0;
-}
-
-.song-dedication {
-  margin-top: 8px;
-  color: #a98755;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
 .song-story {
-  margin-top: 28px;
+  margin-top: 25px;
 }
 
 .song-story p {
   max-width: 760px;
 }
 
+
+/* =====================================================
+   SONG QUOTE
+===================================================== */
+
 .song-quote {
   margin: 30px 0;
+
   padding: 22px 25px;
 
   border-left: 1px solid #a98755;
 
-  background: #090909;
+  background: #0d0d0d;
 
   color: #eeeae0;
 
@@ -322,19 +365,18 @@ p {
   line-height: 1.6;
 }
 
-.song-for {
-  color: #e7e2d7 !important;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px !important;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-}
+
+/* =====================================================
+   SONG BUTTONS
+===================================================== */
 
 .song-buttons {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 12px;
+
   margin-top: 30px;
 }
 
@@ -362,56 +404,68 @@ p {
 
 .song-button:hover {
   background: #a98755;
+
   color: #090909;
+
   border-color: #a98755;
 }
 
 .song-button.primary {
   background: #a98755;
+
   color: #090909;
+
   border-color: #a98755;
 }
 
 .song-button.primary:hover {
   background: #d0b27b;
+
   border-color: #d0b27b;
 }
 
 
 /* =====================================================
-   LYRICS
+   MORE MUSIC
 ===================================================== */
 
-.story {
-  background: #0d0d0d;
-  border-top: 1px solid #292724;
-}
+.more-music {
+  margin-top: 30px;
 
-.lyrics-box {
+  padding: 25px;
+
   border: 1px solid #302d28;
-  padding: 30px 25px;
-  margin-top: 25px;
-  background: #090909;
+
+  background: #0d0d0d;
 }
 
-.lyrics-box h3 {
+.more-music h3 {
   margin-top: 0;
+
   font-family: Arial, Helvetica, sans-serif;
+
   letter-spacing: 2px;
+
   color: #e7e2d7;
 }
 
-.lyrics-song-title {
-  color: #e7e2d7 !important;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px !important;
-  letter-spacing: 1px;
-}
+.coming-soon {
+  display: inline-block;
 
-.lyrics-status {
-  color: #a98755 !important;
-  font-size: 13px !important;
-  letter-spacing: 1px;
+  margin: 7px 7px 0 0;
+
+  padding: 7px 12px;
+
+  border: 1px solid #51483b;
+
+  color: #a98755;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 10px;
+
+  letter-spacing: 1.4px;
+
   text-transform: uppercase;
 }
 
@@ -419,6 +473,11 @@ p {
 /* =====================================================
    MY STORY
 ===================================================== */
+
+.story {
+  border-top: 1px solid #292724;
+  background: #0d0d0d;
+}
 
 .story-box {
   border-left: 1px solid #776247;
@@ -438,9 +497,13 @@ p {
 .bio-photo {
   width: 190px;
   height: 190px;
+
   border-radius: 50%;
+
   border: 1px solid #776247;
+
   margin: 0 auto 35px;
+
   overflow: hidden;
 
   box-shadow:
@@ -479,16 +542,23 @@ p {
 .ml6-icon {
   width: 82px;
   height: 82px;
+
   object-fit: cover;
+
   border: 1px solid #776247;
+
   background: #090909;
+
   padding: 4px;
+
   flex-shrink: 0;
 }
 
 .ml6-intro {
   font-size: 21px;
+
   color: #d5d0c6;
+
   margin-top: 25px;
 }
 
@@ -499,7 +569,9 @@ p {
 
 .ml6-website-link {
   display: block;
+
   margin: 25px 0;
+
   padding: 18px 22px;
 
   border: 1px solid #776247;
@@ -525,7 +597,9 @@ p {
 
 .ml6-website-link:hover {
   background: #a98755;
+
   color: #090909;
+
   border-color: #a98755;
 }
 
@@ -536,13 +610,17 @@ p {
 
 .ml6-details {
   margin-top: 25px;
+
   border: 1px solid #302d28;
+
   background: #0d0d0d;
 }
 
 .ml6-details summary {
   cursor: pointer;
+
   padding: 22px 25px;
+
   color: #d8d1c4;
 
   font-family: Arial, Helvetica, sans-serif;
@@ -562,9 +640,13 @@ p {
 
 .ml6-details summary::after {
   content: "+";
+
   float: right;
+
   color: #a98755;
+
   font-size: 20px;
+
   line-height: 1;
 }
 
@@ -583,14 +665,19 @@ p {
 
 .ml6-content {
   padding: 5px 25px 35px;
+
   border-top: 1px solid #292724;
 }
 
 .ml6-large-image {
   display: block;
+
   width: min(100%, 620px);
+
   margin: 30px auto;
+
   border: 1px solid #776247;
+
   background: #090909;
 }
 
@@ -600,6 +687,7 @@ p {
 
 .ml6-strong {
   color: #e8e2d6;
+
   font-size: 18px;
 }
 
@@ -610,6 +698,7 @@ p {
 
 .ml6-contact {
   margin-top: 30px;
+
   padding: 25px;
 
   border: 1px solid #302d28;
@@ -631,7 +720,9 @@ p {
 
 .ml6-email {
   color: #a98755;
+
   text-decoration: none;
+
   font-size: 17px;
 }
 
@@ -650,6 +741,7 @@ p {
   padding: 18px;
 
   border-top: 1px solid #51483b;
+
   border-bottom: 1px solid #51483b;
 
   text-align: center;
@@ -694,6 +786,7 @@ p {
 
 .facebook:hover {
   background: #a98755;
+
   color: #090909;
 }
 
@@ -716,6 +809,7 @@ footer {
 
 footer p {
   color: #65625c;
+
   font-size: 13px;
 }
 
@@ -732,12 +826,15 @@ footer p {
 
   nav a {
     margin: 0 3px;
+
     font-size: 8px;
+
     letter-spacing: 0.8px;
   }
 
   .subtitle {
     font-size: 13px;
+
     letter-spacing: 2px;
   }
 
@@ -755,12 +852,18 @@ footer p {
     height: 55px;
   }
 
-  .song-box {
-    padding: 28px 20px;
+  .song-item summary {
+    padding: 22px 45px 22px 20px;
+
+    font-size: 17px;
   }
 
-  .song-box h3 {
-    font-size: 22px;
+  .song-item summary::after {
+    right: 17px;
+  }
+
+  .song-content {
+    padding: 25px 20px 30px;
   }
 
   .song-quote {
@@ -773,21 +876,25 @@ footer p {
 
   .song-button {
     width: 100%;
+
     text-align: center;
   }
 
   .ml6-header {
     align-items: flex-start;
+
     gap: 15px;
   }
 
   .ml6-icon {
     width: 65px;
+
     height: 65px;
   }
 
   .ml6-header h2 {
     font-size: 21px;
+
     letter-spacing: 2px;
   }
 
@@ -797,6 +904,7 @@ footer p {
 
   .ml6-website-link {
     font-size: 11px;
+
     padding: 16px 10px;
   }
 
@@ -818,10 +926,6 @@ footer p {
 
   <a href="#music">
     Music
-  </a>
-
-  <a href="#lyrics">
-    Lyrics
   </a>
 
   <a href="#story">
@@ -879,7 +983,9 @@ footer p {
      MUSIC
 ===================================================== -->
 
-<section id="music">
+<section
+  id="music"
+  class="music-section">
 
   <h2>
     Music
@@ -895,104 +1001,130 @@ footer p {
 
 
   <!-- =================================================
-       FEATURED RELEASE
+       SONG LIST
   ================================================== -->
 
-  <div class="song-box">
-
-    <div class="song-label">
-      Featured Release
-    </div>
-
-    <h3>
-      I’ll slow dance with you, one day.
-    </h3>
-
-    <p class="song-dedication">
-      For Ava, Grace & Emily
-    </p>
+  <div class="song-list">
 
 
-    <div class="song-story">
+    <!-- =================================================
+         I’LL SLOW DANCE WITH YOU, ONE DAY.
+    ================================================== -->
 
-      <p>
-        I wrote this song for my three girls.
-      </p>
+    <details class="song-item">
 
-      <p>
-        After my fight with the grim reaper, I set
-        myself a goal — to get some of my music
-        recorded for them. Something from Dad that
-        they could have in the future. Something they
-        could keep and listen to long after I've gone.
-      </p>
-
-      <p>
-        It's a song about a day I hope I get to see —
-        watching my girls grow up, find someone they
-        love, and eventually stand beside them on
-        their wedding day.
-      </p>
-
-      <p>
-        Maybe I'll be there as the proud dad beside
-        them. Maybe I'll be looking down from
-        somewhere above.
-      </p>
-
-      <p>
-        Either way, I wanted them to have this.
-      </p>
-
-      <p>
-        It isn't perfect. It isn't mastered to
-        perfection. That's not really the point.
-      </p>
+      <summary>
+        I’ll slow dance with you, one day.
+      </summary>
 
 
-      <div class="song-quote">
+      <div class="song-content">
 
-        “That's my Dad singing.
-        He wrote this for us.”
+        <div class="song-label">
+          Featured Release
+        </div>
+
+        <p class="song-dedication">
+          For Ava, Grace & Emily
+        </p>
+
+
+        <div class="song-story">
+
+          <p>
+            I wrote this song for my three girls.
+          </p>
+
+          <p>
+            After my fight with the grim reaper, I set
+            myself a goal — to get some of my music
+            recorded for them. Something from Dad that
+            they could have in the future. Something
+            they could keep and listen to long after
+            I've gone.
+          </p>
+
+          <p>
+            It's a song about a day I hope I get to see —
+            watching my girls grow up, find someone they
+            love, and eventually stand beside them on
+            their wedding day.
+          </p>
+
+          <p>
+            Maybe I'll be there as the proud dad beside
+            them. Maybe I'll be looking down from
+            somewhere above.
+          </p>
+
+          <p>
+            Either way, I wanted them to have this.
+          </p>
+
+          <p>
+            It isn't perfect. It isn't mastered to
+            perfection. That's not really the point.
+          </p>
+
+
+          <div class="song-quote">
+
+            “That's my Dad singing.
+            He wrote this for us.”
+
+          </div>
+
+
+          <p>
+            It's simply Dad singing his songs again —
+            something from me to them, for the future.
+          </p>
+
+
+          <p class="song-dedication">
+            For Ava, Grace & Emily.
+          </p>
+
+
+          <!-- =========================================
+               SONG LINKS
+          ========================================== -->
+
+          <div class="song-buttons">
+
+
+            <!-- DITTO SMART LINK -->
+
+            <a
+              href="https://ditto.fm/i-ll-slow-dance-with-you-one-day"
+              class="song-button primary"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Listen / Pre-Save
+
+            </a>
+
+
+            <!-- LYRICS PAGE -->
+
+            <a
+              href="i-ll-slow-dance-with-you-one-day.html"
+              class="song-button">
+
+              Read the Lyrics
+
+            </a>
+
+
+          </div>
+
+        </div>
 
       </div>
 
+    </details>
 
-      <p class="song-for">
-        For Ava, Grace & Emily.
-      </p>
-
-
-      <div class="song-buttons">
-
-
-        <!-- DITTO SMART LINK -->
-
-        <a
-          href="https://ditto.fm/i-ll-slow-dance-with-you-one-day"
-          class="song-button primary"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          Listen / Pre-Save
-
-        </a>
-
-
-        <!-- SEPARATE LYRICS PAGE -->
-
-        <a
-          href="i-ll-slow-dance-with-you-one-day.html"
-          class="song-button">
-
-          Read the Lyrics
-
-        </a>
-
-
-      </div>
-
-    </div>
 
   </div>
 
@@ -1001,7 +1133,7 @@ footer p {
        MORE MUSIC
   ================================================== -->
 
-  <div class="music-box">
+  <div class="more-music">
 
     <h3>
       MORE MUSIC
@@ -1022,59 +1154,6 @@ footer p {
 
   </div>
 
-</section>
-
-
-<!-- =====================================================
-     LYRICS & CHORDS
-===================================================== -->
-
-<section
-  id="lyrics"
-  class="story">
-
-  <h2>
-    Lyrics & Chords
-  </h2>
-
-  <div class="section-line"></div>
-
-  <p>
-    Want to play along?
-    This is where I'll share the lyrics and chords
-    for my songs.
-  </p>
-
-
-  <div class="lyrics-box">
-
-    <h3>
-      I’LL SLOW DANCE WITH YOU, ONE DAY.
-    </h3>
-
-    <p class="lyrics-song-title">
-      Lyrics
-    </p>
-
-    <p>
-      The complete lyrics are available on a
-      separate page, with chords to be added later.
-    </p>
-
-    <p class="lyrics-status">
-      Chords · Coming Soon
-    </p>
-
-
-    <a
-      href="i-ll-slow-dance-with-you-one-day.html"
-      class="song-button">
-
-      Read the Lyrics
-
-    </a>
-
-  </div>
 
 </section>
 
@@ -1083,7 +1162,9 @@ footer p {
      MY STORY
 ===================================================== -->
 
-<section id="story">
+<section
+  id="story"
+  class="story">
 
   <h2>
     My Story
