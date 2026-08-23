@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="I’ll slow dance with you, one day. — A song by Jim.">
+
+<title>I’ll slow dance with you, one day. | JimG3</title>
+
+<style>
+
+/* =====================================================
+   BASE
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #090909;
+  color: #eeeeea;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 10px;
+  background: rgba(5, 5, 5, 0.97);
+  border-bottom: 1px solid #37332d;
+  z-index: 10;
+  text-align: center;
+}
+
+nav a {
+  color: #bcb9b1;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: #b08d55;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 130px 25px 90px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.song-header {
+  text-align: center;
+  padding: 45px 20px 55px;
+}
+
+.song-header h1 {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(30px, 7vw, 55px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #f1f0ec;
+  line-height: 1.3;
+}
+
+.celtic-line {
+  width: 170px;
+  height: 1px;
+  margin: 25px auto;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      #a98755,
+      transparent
+    );
+}
+
+.dedication {
+  color: #a98755;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   LYRICS BOX
+===================================================== */
+
+.lyrics-container {
+  border: 1px solid #302d28;
+  background: #0d0d0d;
+  padding: 45px 35px;
+  position: relative;
+}
+
+.lyrics-container::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 25px;
+  width: 75px;
+  height: 1px;
+  background: #a98755;
+}
+
+
+/* =====================================================
+   LYRICS
+===================================================== */
+
+.lyrics {
+  max-width: 680px;
+  margin: auto;
+}
+
+.verse {
+  margin-bottom: 42px;
+}
+
+.verse p {
+  margin: 0;
+  color: #d0ccc3;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.verse-spacer {
+  height: 20px;
+}
+
+
+/* =====================================================
+   SONG NOTE
+===================================================== */
+
+.song-note {
+  margin-top: 50px;
+  padding: 25px;
+
+  border-top: 1px solid #51483b;
+  border-bottom: 1px solid #51483b;
+
+  text-align: center;
+}
+
+.song-note p {
+  margin: 0;
+  color: #aaa79f;
+  font-size: 15px;
+  font-style: italic;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.buttons {
+  text-align: center;
+  margin-top: 45px;
+}
+
+.button {
+  display: inline-block;
+  margin: 6px;
+  padding: 13px 24px;
+
+  border: 1px solid #6f604c;
+
+  color: #e7e3da;
+
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  transition: 0.25s ease;
+}
+
+.button:hover {
+  background: #a98755;
+  color: #090909;
+  border-color: #a98755;
+}
+
+.button.primary {
+  background: #a98755;
+  color: #090909;
+  border-color: #a98755;
+}
+
+.button.primary:hover {
+  background: #d0b27b;
+  border-color: #d0b27b;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+  text-align: center;
+
+  padding: 50px 25px;
+
+  border-top: 1px solid #292724;
+
+  color: #65625c;
+
+  font-size: 13px;
+}
+
+footer p {
+  color: #65625c;
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  nav {
+    padding: 14px 4px;
+  }
+
+  nav a {
+    margin: 0 3px;
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
+  main {
+    padding: 105px 18px 70px;
+  }
+
+  .song-header {
+    padding: 35px 10px 40px;
+  }
+
+  .song-header h1 {
+    font-size: 29px;
+  }
+
+  .lyrics-container {
+    padding: 35px 20px;
+  }
+
+  .verse p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+
+  .button {
+    display: block;
+    margin: 10px 0;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+  <a href="index.html">
+    JimG3
+  </a>
+
+  <a href="index.html#music">
+    Music
+  </a>
+
+  <a href="index.html#about">
+    About Me
+  </a>
+
+</nav>
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main>
+
+
+  <!-- =================================================
+       SONG HEADER
+  ================================================== -->
+
+  <header class="song-header">
+
+    <h1>
+      I’ll slow dance with you, one day.
+    </h1>
+
+    <div class="celtic-line"></div>
+
+    <div class="dedication">
+      For Ava, Grace & Emily
+    </div>
+
+  </header>
+
+
+  <!-- =================================================
+       LYRICS
+  ================================================== -->
+
+  <div class="lyrics-container">
+
+    <div class="lyrics">
+
+
+      <!-- VERSE 1 -->
+
+      <div class="verse">
+
+        <p>
+          I'll slow dance with you one day<br>
+          Then someone special takes my place<br>
+          With your family around you<br>
+          And a big smile on your face<br>
+          Either watching as a proud man<br>
+          Or an angel from above<br>
+          I'll slow dance with you one day<br>
+          Celebrating your love
+        </p>
+
+      </div>
+
+
+      <!-- VERSE 2 -->
+
+      <div class="verse">
+
+        <p>
+          This day is for you love<br>
+          And the person you've found<br>
+          With friends to support you<br>
+          And love all around<br>
+          Oh You've found your forever<br>
+          Today dawns your new day<br>
+          I'll slow dance with you one day<br>
+          On your wedding day
+        </p>
+
+      </div>
+
+
+      <!-- VERSE 3 -->
+
+      <div class="verse">
+
+        <p>
+          Oh Look how you've grown love<br>
+          How quick time passed us by<br>
+          Your tomorrow's before you<br>
+          True love by your side<br>
+          Look after each other<br>
+          As you go on your way.<br>
+          I'll slow dance with you some day<br>
+          On your wedding day
+        </p>
+
+      </div>
+
+
+      <!-- VERSE 4 -->
+
+      <div class="verse">
+
+        <p>
+          This day is for you love<br>
+          And the person you've found<br>
+          With friends to support you<br>
+          And love all around<br>
+          You've found your forever<br>
+          Today dawns a new day<br>
+          I'll slow dance with you one day<br>
+          On your wedding day
+        </p>
+
+      </div>
+
+
+      <!-- =================================================
+           SONG NOTE
+      ================================================== -->
+
+      <div class="song-note">
+
+        <p>
+          Lyrics written and performed by Jim.
+          Chords will be added here in the future.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  <!-- =================================================
+       BUTTONS
+  ================================================== -->
+
+  <div class="buttons">
+
+    <a
+      href="https://ditto.fm/i-ll-slow-dance-with-you-one-day"
+      class="button primary"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      Listen / Pre-Save
+
+    </a>
+
+
+    <a
+      href="index.html#music"
+      class="button">
+
+      Back to Music
+
+    </a>
+
+  </div>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <p>
+    JimG3 · Music from Airdrie, Scotland
+  </p>
+
+  <p>
+    © 2026 Jim
+  </p>
+
+</footer>
+
+
+</body>
+
+</html>
